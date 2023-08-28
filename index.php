@@ -54,35 +54,37 @@
   
   <div id="thank-you-message"></div>
 </section>
-<script>
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
-
-    if (name === "" || email === "" || message === "") {
-      alert("Please fill in all the required fields.");
-      return;
+<p id="thank-you-message">
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      echo "Thank You";
     }
+    ?>
+</p>
 
-    var formData = new FormData(this);
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
 
-    // You can add additional form data here if needed
+  if (name === "" || email === "" || message === "") {
+    alert("Please fill in all the required fields.");
+    return;
+  }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "submit_form.php", true); // Change the URL to your PHP script
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        document.getElementById("thank-you-message").innerHTML = "<p>Thank You we will get back to you</p>";
-      }
-    };
-    xhr.send(formData);
-  });
+  var formData = new FormData(this);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", ""); // Leave the URL empty to post to the current page
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      document.getElementById("thank-you-message").innerHTML = xhr.responseText;
+    }
+  };
+  xhr.send(formData);
+});
 </script>
-
-<footer class="footer">
-  <p>&copy; 2023 Aman's Web</p>
-</footer>
 </body>
 </html>
