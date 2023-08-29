@@ -73,8 +73,12 @@
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "submit_form.php", true); // Change the URL to your PHP script
     xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        document.getElementById("thank-you-message").innerHTML = "<p>Thank You we will get back to you</p>";
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          document.getElementById("thank-you-message").innerHTML = "<p>" + xhr.responseText + "</p>";
+        } else {
+          document.getElementById("thank-you-message").innerHTML = "<p>An error occurred. Please try again later.</p>";
+        }
       }
     };
     xhr.send(formData);
