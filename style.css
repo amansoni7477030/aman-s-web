@@ -1,3 +1,4 @@
+/* Reset default styles and set font family */
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@ body {
   background-color: #f2f2f2;
 }
 
+/* Header styling */
 .header {
   background-color: #333;
   color: #fff;
@@ -14,17 +16,20 @@ body {
   align-items: center;
 }
 
+/* Navigation styling */
 .nav {
   display: flex;
   align-items: center;
 }
 
+/* Logo styling */
 .logo {
   font-size: 24px;
   margin: 0;
   color: #fff;
 }
 
+/* Navigation links styling */
 .nav-links {
   display: flex;
   list-style: none;
@@ -32,6 +37,7 @@ body {
   padding: 0;
 }
 
+/* Individual navigation link styling */
 .nav-links li {
   margin-right: 20px;
 }
@@ -48,6 +54,7 @@ body {
   border-radius: 5px;
 }
 
+/* Common styling for sections */
 .section {
   padding: 50px;
   background-position: center;
@@ -57,29 +64,35 @@ body {
   text-align: center;
 }
 
+/* Section title styling */
 .section-title {
   font-size: 36px;
   margin: 0;
 }
 
+/* Section subtitle styling */
 .section-subtitle {
   font-size: 24px;
   margin: 0;
   margin-bottom: 20px;
 }
 
+/* Products section styling */
 .products {
   background-image: url(bg-products.jpg);
 }
 
+/* About section styling */
 .about {
   background-image: url(bg-about.jpg);
 }
 
+/* Contact section styling */
 .contact {
   background-image: url(bg-contact.jpg);
 }
 
+/* Styling for product grid */
 .product-grid {
   display: flex;
   align-items: center;
@@ -87,6 +100,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* Styling for individual product */
 .product {
   width: 30%;
   margin: 30px;
@@ -95,6 +109,7 @@ body {
   position: relative;
 }
 
+/* Styling for product images */
 .product img {
   width: 100%;
   margin-bottom: 20px;
@@ -105,11 +120,13 @@ body {
   transform: scale(1.1);
 }
 
+/* Styling for product titles */
 .product-title {
   font-size: 18px;
   margin: 0;
 }
 
+/* Styling for contact form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -119,6 +136,7 @@ body {
   margin: 0 auto;
 }
 
+/* Styling for form inputs and textarea */
 .contact-form input, .contact-form textarea {
   width: 100%;
   padding: 10px;
@@ -128,43 +146,48 @@ body {
   border-radius: 5px;
 }
 
-.contact-form input:hover, .contact-form textarea:
-hover {
-background-color: #f2f2f2;
-transition: all 0.5s ease;
+.contact-form input:hover, .contact-form textarea:hover {
+  background-color: #f2f2f2;
+  transition: all 0.5s ease;
 }
 
+/* Styling for submit button */
 .contact-form input[type="submit"] {
-background-color: #333;
-color: #fff;
-border: none;
-border-radius: 5px;
-padding: 10px 20px;
-cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 .contact-form input[type="submit"]:hover {
-background-color: #f2f2f2;
-color: #333;
-transition: all 0.5s ease;
+  background-color: #f2f2f2;
+  color: #333;
+  transition: all 0.5s ease;
 }
 
+/* Styling for contact information section */
 .contact-info {
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
+/* Styling for contact information text */
 .contact-info p {
-margin: 0 20px;
-font-size: 18px;
+  margin: 0 20px;
+  font-size: 18px;
 }
 
+/* Styling for contact information icons */
 .contact-info i {
-font-size: 36px;
-margin-right: 20px;
+  font-size: 36px;
+  margin-right: 20px;
 }
+
+/* Styling for thank you message */
 #thank-you-message {
   margin-top: 20px;
   padding: 10px;
